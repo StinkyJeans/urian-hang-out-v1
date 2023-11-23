@@ -32,16 +32,16 @@ export default function Signin() {
         
     }
   return (
-    <div className="flex justify-center mt-20 space-x-4">
-        <img src="https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/en/twitter-tips/desktop-assets/ch-01/ch12findphone.png.twimg.1920.png" alt="twitter-image-phone" 
-        className="object-cover md:w-44 md:h-80 rotate-6 hidden md:inline-flex"
+    <div className="flex justify-center mt-20 space-x-4 mt-[13%]">
+        <img src="https://wikiwandv2-19431.kxcdn.com/_next/image?url=https://upload.wikimedia.org/wikipedia/en/8/87/Father_Saturnino_Urios_University_logo.png&w=640&q=50g" alt="urios-logo-image" 
+        className=" md:w-54 md:h-80  hidden md:inline-flex"
         />
         <div className="">
             
                 <div className="flex flex-col items-center ">
-                    <img className='w-36 object-cover' src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png" alt="twitter-logo"/>
-                    <p className="items-center text-sm italic my-10">This app created for learning purposes</p>
-                    <button onClick={onGoogleClick} className="bg-red-400 rounded-lg p-3 text-white hover:bg-red-500">Sign in with Google</button>
+                    <img className='w-36 object-cover' src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Gsuite-logo.png/640px-Gsuite-logo.png" alt="gsuite-logo-image"/>
+                    <p className="items-center text-sm italic my-10">This app is created for urians social media</p>
+                    <button onClick={onGoogleClick} className="bg-red-400 rounded-lg p-3 text-white hover:bg-red-500">Sign in with GSuite</button>
                 </div>
             
         </div>
