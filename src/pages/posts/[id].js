@@ -46,7 +46,7 @@ export default function PostPage({newsResults, randomUsersResults}) {
             <div className='hoverEffect' onClick={()=> router.push ("/")}>
                 <ArrowLeftIcon className='h-5'/>
             </div>
-            <h2 className="text-lg sm:text-xl font-bold cursor-pointer">Tweet</h2>
+            <h2 className="text-lg sm:text-xl font-bold cursor-pointer">Post</h2>
         </div>
         
         <Post id={id} post={post} />
