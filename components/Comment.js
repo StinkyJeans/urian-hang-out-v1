@@ -10,6 +10,8 @@ import { useRecoilState } from "recoil";
 import { modalState, postIdState } from "../atom/modalAtom";
 import { useRouter } from "next/router";
 import { userState } from "../atom/userAtom";
+import { signIn } from "next-auth/react";
+
 
 
 export default function Comment({comment, commentId, originalPostId}) {
