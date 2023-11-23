@@ -105,6 +105,18 @@ export default function Post({post,id}) {
 
         {/* icons */} 
         <div className="flex justify-between text-gray-500 p-2">
+        <div className="flex items-center">
+            {hasLiked ? (
+              <ThumbUpIcon onClick={likePost} className="h-9 w-9 hoverEffect p-2 text-sky-500 hover:bg-sky-100"/>
+            ): (
+              <ThumbUpIcon onClick={likePost} className="h-9 w-9 hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100"/>
+            )}
+            {
+              likes.length > 0 && (
+                <span className={`${hasLiked && "text-sky-500"} text-sm select-none`}>{likes.length}</span>
+              )
+            }     
+            </div>
           <div className="flex items-center select-none">
             
             <ChatIcon onClick={()=> {
@@ -121,22 +133,12 @@ export default function Post({post,id}) {
               <span className="text-sm">{comments.length}</span>
             )}
           </div>
+          
             {currentUser?.uid == post?.data()?.id && 
 
             <TrashIcon onClick={deletePost} className="h-9 w-9 hoverEffect p-2 hover:text-red-600 hover:bg-red-100"/>
             }
-            <div className="flex items-center">
-            {hasLiked ? (
-              <ThumbUpIcon onClick={likePost} className="h-9 w-9 hoverEffect p-2 text-sky-500 hover:bg-sky-100"/>
-            ): (
-              <ThumbUpIcon onClick={likePost} className="h-9 w-9 hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100"/>
-            )}
-            {
-              likes.length > 0 && (
-                <span className={`${hasLiked && "text-sky-500"} text-sm select-none`}>{likes.length}</span>
-              )
-            }     
-            </div>
+            
            
         </div>
 
