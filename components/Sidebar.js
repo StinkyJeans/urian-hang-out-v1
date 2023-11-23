@@ -3,7 +3,6 @@ import SidebarMenuItem from "./SidebarMenuItem";
 import { HomeIcon } from "@heroicons/react/solid";
 import {
   ArrowLeftIcon,
-  DotsHorizontalIcon,
   UserIcon,
   UserCircleIcon
 } from "@heroicons/react/outline";
@@ -14,13 +13,18 @@ import { doc, getDoc } from "firebase/firestore";
 import { useRecoilState } from "recoil";
 import { userState } from "../atom/userAtom";
 import { useRouter } from "next/router";
-import Profile from "./Profile";
+
+
+
 
 export default function Sidebar() {
   const router = useRouter();
   const [currentUser, setCurrentUser] = useRecoilState(userState);
   console.log(currentUser);
   const auth = getAuth();
+  // const navigateToProfile = () => {
+  //   router.push('./Profile'); // Adjust the route as needed
+  // };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -55,33 +59,32 @@ export default function Sidebar() {
 
       <div className="mt-4 mb-2.5 xl:items-start">
         
-        {/* <SidebarMenuItem text="Explore" Icon={HashtagIcon} /> */}
         {currentUser && (
           <>
             {<SidebarMenuItem text="Home" Icon={HomeIcon} active />}
-            {/* <SidebarMenuItem text="Notifications" Icon={BellIcon} />
-            <SidebarMenuItem text="Messages" Icon={InboxIcon} />
-            <SidebarMenuItem text="Bookmarks" Icon={BookmarkIcon} />
-            <SidebarMenuItem text="Lists" Icon={ClipboardIcon} /> */}
-            {<SidebarMenuItem onClick={Profile}  text="Profile" Icon={UserCircleIcon}  />}
+            
+            <button  className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><UserCircleIcon className="h-7 w-7 mr-3" />Profile
+            {/* onClick={navigateToProfile} */}
+            </button>
             {<SidebarMenuItem text="Friends" Icon={UserIcon} />}
-            {/* <SidebarMenuItem text="More" Icon={DotsCircleHorizontalIcon} /> */}
-            {<SidebarMenuItem  text="Signout" Icon={ArrowLeftIcon} />}
+            <button onClick={onSignOut} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><ArrowLeftIcon className="h-5 w-5 mr-2" />Sign Out
+            </button>
+
+          
+        
+            
           </>
         )}
       </div>
-
+      
       {/* Button */}
 
       {currentUser ? (
         <>
-          {/* <button className="bg-blue-400 text-white rounded-full w-56 h-12 font-bold shadow-md hover:brightness-95 text-lg hidden xl:inline">
-            Post
-          </button> */}
-
           {/* Mini-Profile */}
 
           <div className="hoverEffect text-gray-700 flex items-center justify-center xl:justify-start mt-auto">
+            
             <img
               onClick={onSignOut}
               src={currentUser?.userImg}
@@ -92,7 +95,7 @@ export default function Sidebar() {
               <h4 className="font-bold">{currentUser?.name}</h4>
               <p className="text-gray-500">@{currentUser?.username}</p>
             </div>
-            {/* <DotsHorizontalIcon className="h-5 xl:ml-8 hidden xl:inline" /> */}
+  
           </div>
         </>
       ) : (
