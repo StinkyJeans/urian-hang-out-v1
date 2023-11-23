@@ -31,22 +31,43 @@ export default function Signin() {
         }
         
     }
-  return (
-    <div className="flex justify-center mt-20 space-x-4 mt-[13%]">
-        <img src="https://wikiwandv2-19431.kxcdn.com/_next/image?url=https://upload.wikimedia.org/wikipedia/en/8/87/Father_Saturnino_Urios_University_logo.png&w=640&q=50g" alt="urios-logo-image" 
-        className=" md:w-54 md:h-80  hidden md:inline-flex"
-        />
-        <div className="">
-            
-                <div className="flex flex-col items-center ">
-                    <img className='w-36 object-cover' src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Gsuite-logo.png/640px-Gsuite-logo.png" alt="gsuite-logo-image"/>
-                    <p className="items-center text-sm italic my-10">This app is created for urians social media</p>
-                    <button onClick={onGoogleClick} className="bg-red-400 rounded-lg p-3 text-white hover:bg-red-500">Sign in with GSuite</button>
-                </div>
-            
+    return (
+       
+        <div
+          className="flex justify-center items-center h-screen"
+          style={{
+            backgroundImage: "url('https://lh5.googleusercontent.com/p/AF1QipM0LECVIjRcny3Lx6Z2W_W_M5eJSY6d5qovXO-L=w1080-k-no')",
+            backgroundSize: "100%,100%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+        <div className="mb-[10%]">
+          <img
+            src="https://wikiwandv2-19431.kxcdn.com/_next/image?url=https://upload.wikimedia.org/wikipedia/en/8/87/Father_Saturnino_Urios_University_logo.png&w=640&q=50g"
+            alt="urios-logo-image"
+            className="md:w-54 md:h-80 hidden md:inline-flex"
+          />
         </div>
-    </div>
-  )
-}
-
-
+          <div className="mb-[10%]">
+            <div className="flex flex-col items-center">
+              <img
+                className="w-36 object-cover"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Gsuite-logo.png/640px-Gsuite-logo.png"
+                alt="gsuite-logo-image"
+              />
+              <p className="text-sm italic my-10">
+                This app is created for urians social media
+              </p>
+              <button
+                onClick={onGoogleClick}
+                className="bg-red-400 rounded-lg p-3 text-white hover:bg-red-500"
+              >
+                Sign in with GSuite
+              </button>
+            </div>
+          </div>
+        </div>
+      
+      );
+    }
