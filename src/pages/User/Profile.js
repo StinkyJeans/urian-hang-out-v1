@@ -47,11 +47,8 @@ const ProfilePage = () => {
     const userId = currentUser?.uid;
   };
   return (
-   
-  
-
       <div className="">
-        <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-[16.1%]">
+        <div className="mr-1 hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-[16.1%]">
           <Sidebar/>
         </div>
         <div className=' xl:ml-[39%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl mt-1'>

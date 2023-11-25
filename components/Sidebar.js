@@ -22,6 +22,11 @@ export default function Sidebar() {
   const auth = getAuth();
   const navigateToProfile = () => {
     router.push('/User/Profile');
+
+  };
+  const navigateToUserFriends = () => {
+    router.push('/UserFriends/Friends');
+
   };
   const handleHomeClick = () => {
     if (router.pathname !== '/') {
@@ -76,7 +81,10 @@ export default function Sidebar() {
              <UserCircleIcon className="h-7 w-7 mr-3" />
             Profile
             </button>
-            {<SidebarMenuItem text="Friends" Icon={UserIcon} />}
+            <button onClick={navigateToUserFriends} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
+             <UserIcon className="h-7 w-7 mr-3" />
+            Friends
+            </button>
             <button onClick={onSignOut} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><ArrowLeftIcon className="h-5 w-5 mr-2" />Sign Out
             </button>
     </>
