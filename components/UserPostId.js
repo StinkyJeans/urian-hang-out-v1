@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import { userState } from "../atom/userAtom";
 
 
-export default function Post({post,id}) {
+export default function UserPostId({post,id}) {
   const [likes, setLikes] = useState([]);
   const [comments, setComments] = useState([]);
   const [hasLiked, setHasLiked] = useState(false);
@@ -81,7 +81,7 @@ export default function Post({post,id}) {
             {/* post user info */}
             <div className="flex items-center space-x-1 whitespace-nowrap">
                 <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post?.data()?.name}</h4>
-                <span className="text-sm sm:text-[15px]">@{post?.data()?.username} - </span>
+                -
                 <span className="text-sm sm:text-[15px] hover:underline">
                 <Moment fromNow>
                   {post?.data()?.timestamp?.toDate()}

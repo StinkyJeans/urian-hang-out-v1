@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Sidebar from '../../../components/Sidebar'
-// import Widgets from '../../../components/Widgets'
 import CommentModal from '../../../components/CommentModal'
 import { ArrowLeftIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
@@ -67,8 +66,7 @@ export default function PostPage() {
     </div>
 
 
-        {/* Widgets
-        <Widgets newsResults={newsResults.articles} randomUsersResults={randomUsersResults.results}/> */}
+       
 
         {/* Modal */}
 

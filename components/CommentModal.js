@@ -55,7 +55,7 @@ export default function CommentModal() {
                         {/* <span className="w-0.5 h-full z-[-1] absolute left-8 top-11 bg-gray-300"/> */}
                         <img className="h-11 w-11 rounded-full mr-4" src={post.data()?.userImg} alt="user-image"/>
                         <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post.data()?.name}</h4>
-                            <span className="text-sm sm:text-[15px]">@{post.data()?.username} - </span>
+                            <span className="">-</span>
                             <span className="text-sm sm:text-[15px] hover:underline">
                             <Moment fromNow>
                             {post?.data()?.timestamp?.toDate()}
