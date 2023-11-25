@@ -58,6 +58,7 @@ export default function Signin() {
               />
               <p className="text-sm italic my-10">
                 This app is created for urians social media
+                inspired by twitter
               </p>
               <button
                 onClick={onGoogleClick}

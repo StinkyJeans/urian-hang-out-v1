@@ -15,16 +15,19 @@ import { userState } from "../atom/userAtom";
 import { useRouter } from "next/router";
 
 
-
-
 export default function Sidebar() {
   const router = useRouter();
   const [currentUser, setCurrentUser] = useRecoilState(userState);
   console.log(currentUser);
   const auth = getAuth();
-  // const navigateToProfile = () => {
-  //   router.push('./Profile'); // Adjust the route as needed
-  // };
+  const navigateToProfile = () => {
+    router.push('/User/Profile');
+  };
+  const handleHomeClick = () => {
+    if (router.pathname !== '/') {
+      router.push('/');
+    }
+  };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -40,12 +43,14 @@ export default function Sidebar() {
     });
   }, []);
 
+
   function onSignOut() {
     signOut(auth);
     setCurrentUser(null);
   }
+  
   return (
-    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-24">
+    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-[10%]">
       {/* Urian Logo */}
       <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
         <Image
@@ -61,19 +66,20 @@ export default function Sidebar() {
         
         {currentUser && (
           <>
-            {<SidebarMenuItem text="Home" Icon={HomeIcon} active />}
             
-            <button  className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><UserCircleIcon className="h-7 w-7 mr-3" />Profile
-            {/* onClick={navigateToProfile} */}
+            <button onClick={handleHomeClick} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
+             <HomeIcon className="h-7 w-7 mr-3" />
+            Home
+            </button>
+            
+            <button onClick={navigateToProfile} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
+             <UserCircleIcon className="h-7 w-7 mr-3" />
+            Profile
             </button>
             {<SidebarMenuItem text="Friends" Icon={UserIcon} />}
             <button onClick={onSignOut} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><ArrowLeftIcon className="h-5 w-5 mr-2" />Sign Out
             </button>
-
-          
-        
-            
-          </>
+    </>
         )}
       </div>
       

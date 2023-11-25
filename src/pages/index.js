@@ -4,6 +4,7 @@ import Feed from '../../components/Feed'
 import Widgets from '../../components/Widgets'
 import CommentModal from '../../components/CommentModal'
 
+
 export default function Home({newsResults, randomUsersResults}) {
   return (
     <div className=''>
@@ -14,7 +15,7 @@ export default function Home({newsResults, randomUsersResults}) {
       </Head>
 
       <main className='flex min-h-screen max-w-7xl mx-auto pt-1 '>
-
+    
         {/* Sidebar */}
 
         <Sidebar/>

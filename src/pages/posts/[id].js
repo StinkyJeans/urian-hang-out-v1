@@ -12,7 +12,7 @@ import Comment from '../../../components/Comment'
 import { AnimatePresence, motion } from 'framer-motion'
 
 
-export default function PostPage({newsResults, randomUsersResults}) {
+export default function PostPage() {
     const router = useRouter();
     const {id} = router.query;
     const [post, setPost] = useState();
