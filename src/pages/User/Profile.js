@@ -69,30 +69,35 @@ const ProfilePage = () => {
         </div>
 
         {/* User Profile Section */}
-        <div className="mt-4 p-4 bg-white rounded-md shadow-md">
-          <div>
-          <h2 className="text-xl font-bold mb-4">Your Profile</h2>
-          </div>
-          
+        <div className="mt-4 p-4 rounded-md shadow-md " 
+        style={{
+          backgroundImage: `url('https://c4.wallpaperflare.com/wallpaper/600/919/630/digital-art-illustration-lofi-hd-wallpaper-preview.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          }}>
+
           {/* Add more user details as needed */}
-          <div className="cursor-pointer flex items-center">
-            <div>
+          <div className="cursor-pointer flex items-center ">
+          <div className='mt-[25%]  '>
             <div>
             <img className="h-11 w-11 rounded-full mr-4" src={currentUser?.userImg} alt="user-image"/>
             
             </div>
             
           </div>
-            <div>
+
+            <div className='mt-[25%] ' >
               <h3 className="font-bold">{currentUser?.name}</h3>
-              <p className="text-gray-500">@{currentUser?.username}</p>
+              <p className="text-gray-400">@{currentUser?.username}</p>
               
             </div>
-            <div className="ml-auto">
-            <button>Add Friend</button>
-            </div>
+            {/* <div className="mt-[25%] ml-auto">
+            <button className='bg-sky-600 rounded-full mt-2 p-2 rounded-md'>Add Friend</button>
+            </div> */}
           </div>
         </div>
+        
 
         {/* Additional Content */}
         <div className="mt-4 p-4 bg-white rounded-md shadow-md">
