@@ -8,11 +8,11 @@ import { ArrowLeftIcon } from '@heroicons/react/outline'
 export default function User2() {
   const router = useRouter();
   const navigateToUser1 = () => {
-    router.push('/User/MessageUsers/User3');
+    router.push('/User/MessageUsers/User1');
   
   };
   const navigateToUser2 = () => {
-    router.push('/User/MessageUsers/User3');
+    router.push('/User/MessageUsers/User2');
   
   };
   const navigateToUser3 = () => {
