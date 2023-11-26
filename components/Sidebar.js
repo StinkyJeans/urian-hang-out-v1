@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SidebarMenuItem from "./SidebarMenuItem";
 import { HomeIcon } from "@heroicons/react/solid";
 import {
   ArrowLeftIcon,
@@ -15,17 +14,18 @@ import { userState } from "../atom/userAtom";
 import { useRouter } from "next/router";
 
 
+
 export default function Sidebar() {
   const router = useRouter();
   const [currentUser, setCurrentUser] = useRecoilState(userState);
   console.log(currentUser);
   const auth = getAuth();
   const navigateToProfile = () => {
-    router.push('/User/Profile');
+    router.push('/User/Userprofile');
 
   };
   const navigateToUserFriends = () => {
-    router.push('/UserFriends/Friends');
+    router.push('/UserFriends/Userfriends');
 
   };
   const handleHomeClick = () => {
@@ -87,7 +87,7 @@ export default function Sidebar() {
             </button>
             <button onClick={onSignOut} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><ArrowLeftIcon className="h-5 w-5 mr-2" />Sign Out
             </button>
-    </>
+        </>
         )}
       </div>
       
@@ -106,7 +106,7 @@ export default function Sidebar() {
               className="h-10 w-10 rounded-full xl:mr-2"
             />
             <div className="leading-5 hidden xl:inline">
-              <h4 className="font-bold">{currentUser?.name}</h4>
+              <h4 className="font-bold truncate">{currentUser?.name}</h4>
               <p className="text-gray-500">@{currentUser?.username}</p>
             </div>
   
@@ -119,6 +119,7 @@ export default function Sidebar() {
         >
           Sign in
         </button>
+        
       )}
     </div>
   );

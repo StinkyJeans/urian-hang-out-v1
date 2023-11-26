@@ -9,6 +9,7 @@ import { collection, doc, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import Comment from '../../../components/Comment'
 import { AnimatePresence, motion } from 'framer-motion'
+import DropdownButton from '../../../components/DropDownButton'
 
 
 export default function PostPage() {
@@ -27,6 +28,7 @@ export default function PostPage() {
 
   return (
     <div className=''>
+      <div>
       <Head>
         <title>Post page</title>
         <meta name="description" content="Created with nextjs" />
@@ -36,11 +38,11 @@ export default function PostPage() {
       <main className='flex min-h-screen max-w-7xl mx-auto pt-1'>
 
         {/* Sidebar */}
-
+        
         <Sidebar/>
-
+        
         {/* Feed */}
-        <div className=" xl:ml-[370px] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl ">
+      <div className=" xl:ml-[34%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl ">
         <div className="flex items-center space-x-2 py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200">
             <div className='hoverEffect' onClick={()=> router.push ("/")}>
                 <ArrowLeftIcon className='h-5'/>
@@ -64,17 +66,17 @@ export default function PostPage() {
             </div>
         )}
     </div>
-
-
+      {/* DropDownButon */}
+      <DropdownButton/>
        
+       {/* Modal */}
 
-        {/* Modal */}
-
-        <CommentModal/>
+     <CommentModal/>
+       
       </main>
 
-
-
+    </div>
+    
     </div>
   )
 }

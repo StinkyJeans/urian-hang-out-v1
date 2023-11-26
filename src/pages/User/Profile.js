@@ -11,10 +11,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../../firebase';
 import { userState } from '../../../atom/userAtom';
-import Sidebar from "../../../components/Sidebar";
 import UserPost from "../../../components/UserPost";
-import UserPostId from "../../../components/UserPostId";
-
 
 
 const ProfilePage = () => {
@@ -43,16 +40,11 @@ const ProfilePage = () => {
     }
   };
   const ProfilePage = () => {
-    // Assuming you have the userId of the current user
     const userId = currentUser?.uid;
   };
-  return (
-      <div className="">
-        <div className="mr-1 hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-[16.1%]">
-          <Sidebar/>
-        </div>
-        <div className=' xl:ml-[39%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl mt-1'>
-        <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200">
+  return (   
+    <div className=' xl:ml-[34%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl mt-1'>
+        <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
           <h2 onClick={handleHomeClick} className="text-lg sm:text-xl font-bold cursor-pointer">Profile</h2>
           <div className="ml-5 w-[80%] xl:w-[75%] sticky top-0 bg-white py-1.5 z-50">
             <div className="flex items-center p-3 rounded-full bg-red-300 relative">
@@ -64,18 +56,20 @@ const ProfilePage = () => {
             <UserCircleIcon className="h-5" />
           </div>
         </div>
+        
 
         {/* User Profile Section */}
-        <div className="mt-4 p-4 rounded-md shadow-md " 
+        <div className="mt-1 p-4 rounded-md shadow-md " 
         style={{
           backgroundImage: `url('https://c4.wallpaperflare.com/wallpaper/600/919/630/digital-art-illustration-lofi-hd-wallpaper-preview.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           }}>
+          
 
           {/* Add more user details as needed */}
-          <div className="cursor-pointer flex items-center ">
+          <div className="cursor-pointer flex items-center rounded-full">
           <div className='mt-[25%]  '>
             <div>
             <img className="h-11 w-11 rounded-full mr-4" src={currentUser?.userImg} alt="user-image"/>
@@ -89,9 +83,6 @@ const ProfilePage = () => {
               <p className="text-gray-400">@{currentUser?.username}</p>
               
             </div>
-            {/* <div className="mt-[25%] ml-auto">
-            <button className='bg-sky-600 rounded-full mt-2 p-2 rounded-md'>Add Friend</button>
-            </div> */}
           </div>
         </div>
         
@@ -102,9 +93,7 @@ const ProfilePage = () => {
           <UserPost/>
         </div>
           {/* <UserPostId/> */}
-      </div>
-      </div>
-     
+      </div>   
   );
 };
 

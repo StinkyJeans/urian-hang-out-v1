@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Sidebar from '../../components/Sidebar'
 import Feed from '../../components/Feed'
 import CommentModal from '../../components/CommentModal'
+import DropdownButton from '../../components/DropDownButton'
 
 
 export default function Home({newsResults, randomUsersResults}) {
@@ -22,7 +23,10 @@ export default function Home({newsResults, randomUsersResults}) {
         {/* Feed */}
         <Feed />
 
-       
+        {/* DropDownButton */}
+
+        <DropdownButton/>
+
         {/* Modal */}
 
         <CommentModal/>
