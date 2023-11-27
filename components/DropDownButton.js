@@ -1,10 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-
-
-
-
 const DropdownButton = () => {
   const router = useRouter();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -85,7 +81,7 @@ const DropdownButton = () => {
                 <div className='mx-1 py-2 flex mt-2 items-center'>
                 <img
                     className='h-7 w-7 rounded-full mr-4 ml-1 '
-                     src="https://pbs.twimg.com/profile_images/1521288481187586049/v_g3ZXVs_400x400.jpg"
+                     src="https://pics.craiyon.com/2023-06-07/bea7f6db2e1f4ad5acad0860f8284b95.webp"
                      alt="Profile Image"
                 /> 
                 <h2 className='text-xs truncate'>ALLAN RUBILLA</h2>

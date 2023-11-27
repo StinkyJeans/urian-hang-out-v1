@@ -1,7 +1,6 @@
 
 import { useRouter } from 'next/router';
 import { SearchIcon} from "@heroicons/react/outline";
-
 import {
   UserCircleIcon
 } from "@heroicons/react/outline";
@@ -23,7 +22,7 @@ const ProfilePage = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const fetchUser = async () => {
-          const docRef = doc(db, "Userposts", auth.currentUser.providerData[0].uid);
+          const docRef = doc(db, "posts", auth.currentUser.providerData[0].uid);
           const docSnap = await getDoc(docRef);
           if (docSnap.exists()) {
             setCurrentUser(docSnap.data());
@@ -39,9 +38,7 @@ const ProfilePage = () => {
       router.push('/User/Profile');
     }
   };
-  const ProfilePage = () => {
-    const userId = currentUser?.uid;
-  };
+
   return (   
     <div className=' xl:ml-[34%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl mt-1'>
         <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
@@ -56,43 +53,32 @@ const ProfilePage = () => {
             <UserCircleIcon className="h-5" />
           </div>
         </div>
-        
-
         {/* User Profile Section */}
         <div className="mt-1 p-4 rounded-md shadow-md " 
-        style={{
-          backgroundImage: `url('https://c4.wallpaperflare.com/wallpaper/600/919/630/digital-art-illustration-lofi-hd-wallpaper-preview.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          }}>
-          
-
+          style={{
+            backgroundImage: `url('https://c4.wallpaperflare.com/wallpaper/600/919/630/digital-art-illustration-lofi-hd-wallpaper-preview.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            }}>
           {/* Add more user details as needed */}
           <div className="cursor-pointer flex items-center rounded-full">
           <div className='mt-[25%]  '>
             <div>
-            <img className="h-11 w-11 rounded-full mr-4" src={currentUser?.userImg} alt="user-image"/>
-            
-            </div>
-            
+            <img className="h-11 w-11 rounded-full mr-4" src={currentUser?.userImg} alt="user-image"/>      
+            </div>    
           </div>
-
             <div className='mt-[25%] ' >
               <h3 className="font-bold">{currentUser?.name}</h3>
               <p className="text-gray-400">@{currentUser?.username}</p>
-              
             </div>
           </div>
         </div>
-        
-
         {/* Additional Content */}
         <div className="mt-4 p-4 bg-white rounded-md shadow-md">
           <h2 className="text-xl font-bold mb-4">Your Posts</h2>
           <UserPost/>
         </div>
-          {/* <UserPostId/> */}
       </div>   
   );
 };

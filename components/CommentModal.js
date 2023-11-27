@@ -2,7 +2,7 @@ import { useRecoilState } from "recoil"
 import {modalState, postIdState} from "../atom/modalAtom"
 import { useRouter } from "next/router";
 import Modal from'react-modal';
-import { EmojiHappyIcon, PhotographIcon, XIcon } from "@heroicons/react/outline";
+import {XIcon } from "@heroicons/react/outline";
 import { db } from "../firebase";
 import { useEffect, useState } from "react";
 import { addDoc, collection, doc, onSnapshot, serverTimestamp } from "firebase/firestore";

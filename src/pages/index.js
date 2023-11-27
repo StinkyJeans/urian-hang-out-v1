@@ -5,7 +5,7 @@ import CommentModal from '../../components/CommentModal'
 import DropdownButton from '../../components/DropDownButton'
 
 
-export default function Home({newsResults, randomUsersResults}) {
+export default function Home() {
   return (
     <div className=''>
       <Head>

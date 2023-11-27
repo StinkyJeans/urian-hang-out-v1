@@ -1,133 +1,125 @@
-import React from 'react'
-import Usersenders from '../../../../components/Usersenders'
-import Messages from '../Messages/Messages'
+import React from 'react';
 import { useRouter } from 'next/router';
-import { SearchIcon, UserCircleIcon, ArrowRightIcon } from "@heroicons/react/outline";
-import { ArrowLeftIcon } from '@heroicons/react/outline'
+import { SearchIcon, UserCircleIcon, ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/outline";
+
 
 export default function User3() {
   const router = useRouter();
+
   const navigateToUser1 = () => {
     router.push('/User/MessageUsers/User1');
-  
   };
   const navigateToUser2 = () => {
     router.push('/User/MessageUsers/User2');
-  
   };
+
   const navigateToUser3 = () => {
-    router.push('/User/MessageUsers/User3');
-  
+    router.push('/User/MessageUsers/User3'); 
   };
   return (
     <div>
       <main>
-        {/* UserSenders  */}
+        {/* UserSenders */}
         <div className='sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-[26%]  border-l border-r border-gray-200 '>
-        <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
+          <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
             <h1 className="text-lg sm:text-xl font-bold cursor-pointer ml-2">People</h1>
-                <div className="ml-5 w-[80%] xl:w-[75%] sticky top-0 bg-white py-1.5 z-50">
-                </div>
-                <div className="hoverEffect flex items-center justify-center px-0 ml-auto w-9 h-9">
-                <UserCircleIcon className="h-5"/>
+            <div className="ml-5 w-[80%] xl:w-[75%] sticky top-0 bg-white py-1.5 z-50"></div>
+            <div className="hoverEffect flex items-center justify-center px-0 ml-auto w-9 h-9">
+              <UserCircleIcon className="h-5"/>
             </div>
-            <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div onClick={navigateToUser1} className='border-b cursor-pointer'>
+            <div className='mx-1 py-2 px-4 flex mt-2 items-center'>
+              <img
+                className='h-11 w-11 rounded-full mr-4 ml-1 '
+                src="https://diffusionart.co/wp-content/uploads/2023/04/Lofi-Music-Anime-Graphics-Wallpapers9.png"
+                alt="Profile Image"
+              /> 
+              <h2 className='text-xs w-14 truncate'>CHARLES DAVE PAJARILLO</h2>
             </div>
-            <div>
-                
+          </div>
+          <div onClick={navigateToUser2} className='border-b cursor-pointer'>
+            <div className='mx-1 py-2 px-4 flex mt-2 items-center'>
+              <img 
+                className='h-11 w-11 rounded-full mr-4 ml-1 '
+                src="https://i1.sndcdn.com/avatars-Y0u4BMUXywLPp8eX-EySIVQ-t240x240.jpg"
+                alt="Profile Image"
+              /> 
+              <h2 className='text-xs w-14 truncate'>AMIR DARIUS ESTRELLA</h2>
             </div>
-            
+          </div>
+          <div onClick={navigateToUser3} className='border-b cursor-pointer'>
+            <div className='mx-1 py-2 px-4 flex mt-2 items-center'>
+              <img
+                className='h-11 w-11 rounded-full mr-4 ml-1 '
+                src="https://pics.craiyon.com/2023-06-07/bea7f6db2e1f4ad5acad0860f8284b95.webp"
+                alt="Profile Image"
+              /> 
+              <h2 className='text-xs w-14 truncate'>ALLAN RUBILLA</h2>
+            </div>
+          </div>
         </div>
-        <div onClick={navigateToUser1} className='border-b cursor-pointer'>
-                <div className='mx-1 py-2 px-4 flex mt-2 items-center'>
-                <img
-                    className='h-11 w-11 rounded-full mr-4 ml-1 '
-                     src="https://diffusionart.co/wp-content/uploads/2023/04/Lofi-Music-Anime-Graphics-Wallpapers9.png"
-                     alt="Profile Image"
-                /> 
-                <h2 className='text-xs w-14 truncate'>CHARLES DAVE PAJARILLO</h2>
-            </div>
-        </div>
-        <div onClick={navigateToUser2} className='border-b cursor-pointer'>
-                <div className='mx-1 py-2 px-4 flex mt-2 items-center'>
-                <img 
-                    className='h-11 w-11 rounded-full mr-4 ml-1 '
-                     src="https://i1.sndcdn.com/avatars-Y0u4BMUXywLPp8eX-EySIVQ-t240x240.jpg"
-                     alt="Profile Image"
-                /> 
-                <h2 className='text-xs w-14 truncate'>AMIR DARIUS ESTRELLA</h2>
-            </div>
-        </div>
-        <div className='border-b cursor-pointer'>
-                <div className='mx-1 py-2 px-4 flex mt-2 items-center'>
-                <img
-                    className='h-11 w-11 rounded-full mr-4 ml-1 '
-                     src="https://pbs.twimg.com/profile_images/1521288481187586049/v_g3ZXVs_400x400.jpg"
-                     alt="Profile Image"
-                /> 
-                <h2 className='text-xs w-14 truncate'>ALLAN RUBILLA</h2>
-            </div>
-        </div>
-    </div>
 
         {/* Messages */}
-        <div className=" xl:ml-[39%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl">
-        <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
-            <div className='hoverEffect' onClick={()=> router.push ("/")}>
-                <ArrowLeftIcon className='h-5'/>
+        <div className="xl:ml-[39%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl">
+          <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
+            <div className='hoverEffect' onClick={() => router.push("/")}>
+              <ArrowLeftIcon className='h-5'/>
             </div>
             <h1 className="text-lg sm:text-xl font-bold cursor-pointer">Messages</h1>
             <div className="ml-5 w-[80%] xl:w-[75%] sticky top-0 bg-white py-1.5 z-50">
-            <div className="flex items-center p-3 rounded-full bg-red-300 relative">
+              <div className="flex items-center p-3 rounded-full bg-red-300 relative">
                 <SearchIcon className="h-5 z-50 text-gray-500"/>
-            <input className="absolute inset-0 rounded-full pl-11 border-gray-500 text-gray-700 focus:shadow-lg focus:bg-white bg-gray-100" type="text" placeholder="Search Urians"/>
-            </div>
+                <input className="absolute inset-0 rounded-full pl-11 border-gray-500 text-gray-700 focus:shadow-lg focus:bg-white bg-gray-100" type="text" placeholder="Search Urians"/>
+              </div>
             </div>
             <div className="hoverEffect flex items-center justify-center px-0 ml-auto w-9 h-9">
-                <UserCircleIcon className="h-5"/>
+              <UserCircleIcon className="h-5"/>
             </div>
-            <div>
-            </div>
-            
-        </div>
-             <div className='flex mt-2 items-center font-bold border-b-2'>
-                <img
-                    className='h-11 w-11 rounded-full mr-4 ml-10 '
-                     src="https://pbs.twimg.com/profile_images/1521288481187586049/v_g3ZXVs_400x400.jpg"
-                     alt="Profile Image"
-                /> 
-                <h2>ALLAN RUBILLA </h2>
-            </div>
-            <div className='ml-10'>
+            <div></div>
+          </div>
+          <div className='flex mt-2 items-center font-bold border-b-2'>
+            <img
+              className='h-11 w-11 rounded-full mr-4 ml-10 '
+              src="https://pics.craiyon.com/2023-06-07/bea7f6db2e1f4ad5acad0860f8284b95.webp"
+              alt="Profile Image"
+            /> 
+            <h2>ALLAN RUBILLA </h2>
+          </div>
+          {/* Message Content */}
+          <div className=''>
             <div className='ml-10 mt-2'>
-                <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Noc!!!!</p>
-                <p className='text-sm text-gray-500 ml-4'>- 10 minutes ago</p> 
+              <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Noc!!!!</p>
+              <p className='text-sm text-gray-500 ml-4'>- 10 minutes ago</p> 
             </div>
             <div className='ml-80 mt-2'>
-                <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Man!!???</p>
-                <p className='text-sm text-gray-500 ml-4'>- 7 minutes ago</p> 
+              <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Man!!???</p>
+              <p className='text-sm text-gray-500 ml-4'>- 7 minutes ago</p> 
             </div>
             <div className='ml-10 mt-2'>
-                <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Haka?</p>
-                <p className='text-sm text-gray-500 ml-4'>- 5 minutes ago</p> 
+              <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Haka?</p>
+              <p className='text-sm text-gray-500 ml-4'>- 5 minutes ago</p> 
             </div>
             <div className='ml-80 mr-7 mt-2'>
-                <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Office ga tambay naa sila adi</p>
-                <p className='text-sm text-gray-500 ml-4'>- 3 minutes ago</p> 
+              <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Office ga tambay naa sila adi</p>
+              <p className='text-sm text-gray-500 ml-4'>- 3 minutes ago</p> 
             </div>
             <div className='ml-10 mt-2'>
-                <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Otw ko dira</p>
-                <p className='text-sm text-gray-500 ml-4'>- 1 minute ago</p> 
+              <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Otw ko dira</p>
+              <p className='text-sm text-gray-500 ml-4'>- 1 minute ago</p> 
             </div>
+          </div>
+          {/* Message Input */}
+          <div className='border-b-4'>
+            <div className="mt-2 flex items-center p-3 rounded-full bg-red-300 relative">
+              <ArrowRightIcon className="h-5 z-50 text-gray-500"/>
+              <input className="absolute inset-0 rounded-full pl-11 border-gray-500 text-gray-700 focus:shadow-lg focus:bg-white bg-gray-100" type="text" placeholder="Write message here"/>
             </div>
-        <div className='border-b-4'>
-        <div className="mt-2 flex items-center p-3 rounded-full bg-red-300 relative">
-                <ArrowRightIcon className="h-5 z-50 text-gray-500"/>
-            <input className="absolute inset-0 rounded-full pl-11 border-gray-500 text-gray-700 focus:shadow-lg focus:bg-white bg-gray-100" type="text" placeholder="Write message here"/>
-            </div>
+          </div>
         </div>
-    </div>
       </main>
     </div>
-  )
+  );
 }

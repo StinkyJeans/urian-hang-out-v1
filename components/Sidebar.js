@@ -14,7 +14,6 @@ import { userState } from "../atom/userAtom";
 import { useRouter } from "next/router";
 
 
-
 export default function Sidebar() {
   const router = useRouter();
   const [currentUser, setCurrentUser] = useRecoilState(userState);
