@@ -67,7 +67,7 @@ export default function Comment({comment, commentId, originalPostId}) {
             {/* post user info */}
             <div className="flex items-center space-x-1 whitespace-nowrap">
                 <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{comment?.name}</h4>
-                <span className="text-sm sm:text-[15px]">@{comment?.username} - </span>
+                <span> - </span>
                 <span className="text-sm sm:text-[15px] hover:underline">
                 <Moment fromNow>
                   {comment?.timestamp?.toDate()}
