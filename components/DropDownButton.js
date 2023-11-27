@@ -24,7 +24,7 @@ const DropdownButton = () => {
  
 
   return (
-    <div className="relative inline-block text-left ml-10 rounded-full">
+    <div className="relative inline-block text-left ml-0 lg:ml-10 rounded-full mr-5 lg:mr-0">
       <button
         className="bg-blue-500 text-white px-4 py-2 rounded-full focus:outline-none"
         onClick={toggleDropdown}

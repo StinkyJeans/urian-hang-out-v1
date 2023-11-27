@@ -22,7 +22,7 @@ export default function User1() {
     <div>
       <main className="flex">
         {/* Usersenders */}
-        <div className='sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-[26%]  border-l border-r border-gray-200 '>
+        <div className='hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-[26%]  border-l border-r border-gray-200 '>
           <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
             <h1 className="text-lg sm:text-xl font-bold cursor-pointer ml-2">People</h1>
             <div className="ml-5 w-[80%] xl:w-[75%] sticky top-0 bg-white py-1.5 z-50"></div>
