@@ -78,14 +78,15 @@ export default function Post({post,id}) {
 
         <div className="flex items-center justify-between">
             {/* post user info */}
-            <div className="flex items-center space-x-1 whitespace-nowrap" >
+            <div className="flex flex-col sm:flex-row items-center space-x-1 whitespace-nowrap" >
                 <h4 className="font-bold text-xs sm:text-xs md:text-sm lg:text-[16px] xl:text-[15px] hover:underline">{post?.data()?.name}</h4>
-                <span className="space-4">-</span>
-                <span className="text-sm sm:text-[15px] hover:underline">
+                {/* <span className="space-4 hidden lg:block">-</span> */}
+                <span className="text-xs sm:text-[15px]">-
                 <Moment fromNow>
-                  {post?.data()?.timestamp?.toDate()}
+                 {post?.data()?.timestamp?.toDate()}
                 </Moment>
                 </span>
+               
             </div>
 
         </div>
