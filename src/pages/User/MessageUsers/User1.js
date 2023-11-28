@@ -6,7 +6,7 @@ import {
   ArrowLeftIcon
 } from "@heroicons/react/outline";
 import { useRouter } from 'next/router';
-import { AnimatePresence, motion } from "framer-motion";
+
 
 
 export default function User1() {

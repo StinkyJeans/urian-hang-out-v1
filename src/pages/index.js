@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Sidebar from '../../components/Sidebar'
+import MobileSidebar from '../../components/MobileSidebar'
 import Feed from '../../components/Feed'
 import CommentModal from '../../components/CommentModal'
 import DropdownButton from '../../components/DropDownButton'
@@ -26,7 +27,12 @@ export default function Home() {
         {/* DropDownButton */}
 
         <DropdownButton/>
+       
+        {/* MobileSidebar */}
 
+        <MobileSidebar/>
+
+       
         {/* Modal */}
 
         <CommentModal/>

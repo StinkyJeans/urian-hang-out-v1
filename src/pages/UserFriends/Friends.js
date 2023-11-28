@@ -1,11 +1,16 @@
 import React from 'react';
-import { SearchIcon, UserCircleIcon } from "@heroicons/react/outline";
+import { SearchIcon, UserCircleIcon, ArrowLeftIcon } from "@heroicons/react/outline";
+import { useRouter } from 'next/router';
 
 
 export default function Friends() {
+  const router = useRouter();
   return (
     <div className='xl:ml-[34%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl mt-1'>
       <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
+      <div className='hoverEffect' onClick={() => router.push("/")}>
+              <ArrowLeftIcon className='h-5'/>
+            </div>
             <h2 className="text-lg sm:text-xl font-bold cursor-pointer">Friends</h2>
             <div className="ml-5 w-[80%] xl:w-[75%] sticky top-0 bg-white py-1.5 z-50">
             <div className="flex items-center p-3 rounded-full bg-red-300 relative">
