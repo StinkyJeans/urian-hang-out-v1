@@ -51,12 +51,11 @@ export default function CommentModal() {
                         <XIcon className="h-[22px] text-gray-700"/>
                     </div>
                   </div>
-                    <div className="p-2 flex items-center space-x-1  relative ">
+                    <div className="p-2 flex items-center space-x-1  relative flex flex-col sm:flex-row">
                         {/* <span className="w-0.5 h-full z-[-1] absolute left-8 top-11 bg-gray-300"/> */}
                         <img className="h-11 w-11 rounded-full mr-4" src={post.data()?.userImg} alt="user-image"/>
                         <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post.data()?.name}</h4>
-                            <span className="">-</span>
-                            <span className="text-sm sm:text-[15px] hover:underline">
+                            <span className=" text-xs sm:text-[15px] hover:underline ">-
                             <Moment fromNow>
                             {post?.data()?.timestamp?.toDate()}
                             </Moment>
@@ -73,7 +72,7 @@ export default function CommentModal() {
                                 onChange={(e) => setInput(e.target.value)}
              >
                                 </textarea>
-                                            <button onClick={sendComment} disabled={!input.trim()} className="ml-[70%] bg-blue-400 text-white px-4 py-1.5 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50 ">Comment</button>
+                                            <button onClick={sendComment} disabled={!input.trim()} className="ml-[52%] sm:ml-[65%]  bg-blue-400 text-white px-4 py-1.5 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50 ">Comment</button>
                                       
                             </div>
                          </div>
