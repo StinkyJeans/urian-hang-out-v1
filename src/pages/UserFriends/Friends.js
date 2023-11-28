@@ -58,7 +58,7 @@ const FriendItem = ({ imageUrl, name, daysAgo }) => (
     />
     <p className='font-bold hover:underline'>{name}</p>
     <div className='ml-auto mr-7 font-semibold'>
-      <h2 className='space-x-4'>
+      <h2 className='text-xs space-x-4'>
         Added {daysAgo}
       </h2>
     </div>
