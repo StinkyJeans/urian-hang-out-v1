@@ -1,5 +1,4 @@
 import {ChatIcon, ThumbUpIcon, TrashIcon } from "@heroicons/react/outline";
-// import { HeartIcon as HeartIconFilled} from "@heroicons/react/solid";
 import { collection, deleteDoc, doc, onSnapshot, setDoc } from "firebase/firestore";
 import Moment from "react-moment";
 import { db, storage } from "../firebase";
@@ -88,8 +87,6 @@ export default function Post({post,id}) {
                 </Moment>
                 </span>
             </div>
-            {/* dot icon
-            <DotsHorizontalIcon className="h-10 hoverEffect w-10 hover:bg-sky-100 hover:text-sky-500 p-2"/> */}
 
         </div>
         {/* post text */}

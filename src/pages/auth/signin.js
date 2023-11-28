@@ -36,8 +36,8 @@ export default function Signin() {
         <div
           className="flex justify-center items-center h-screen"
           style={{
-            backgroundImage: "url('https://lh5.googleusercontent.com/p/AF1QipM0LECVIjRcny3Lx6Z2W_W_M5eJSY6d5qovXO-L=w1080-k-no')",
-            backgroundSize: "100%,100%",
+            backgroundImage: "url('https://scontent.fcgy2-1.fna.fbcdn.net/v/t1.6435-9/135504952_4024672444242937_7059899376855643437_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=300f58&_nc_eui2=AeHNWUb_kxDjUa_Vbc2T9tlIT0G-_FyWaMpPQb78XJZoynX1xISWGRW5vrVI24JZvfEoLJ1iLYVOU-Qo3iDjI9ud&_nc_ohc=inCUedLc7fIAX9nY6PF&_nc_ht=scontent.fcgy2-1.fna&oh=00_AfDv38xnsdPMdeLn7N9PebCjOl2ayjK47ssoPy9mou14xw&oe=658D2228')",
+            backgroundSize: "140%,140%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
