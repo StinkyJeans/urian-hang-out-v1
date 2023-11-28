@@ -8,6 +8,7 @@ import { useRecoilState } from "recoil";
 import { modalState, postIdState } from "../atom/modalAtom";
 import { useRouter } from "next/router";
 import { userState } from "../atom/userAtom";
+import CommentHeader from './CommentHeader';
 
 
 export default function Comment({comment, commentId, originalPostId}) {
@@ -56,19 +57,23 @@ export default function Comment({comment, commentId, originalPostId}) {
 
   return (
     
-    <div className="flex p-3 cursor-pointer  border-b border-gray-200 pl-20 ">
-        {/* user image */}
-        <img className="h-11 w-11 rounded-full mr-4" src={comment?.userImg} alt="user-image"/>
+    <div>
+    {/* Comment Header */}
+    <CommentHeader />
+
+    {/* Single Comment */}
+    <div className="flex p-3 cursor-pointer border-b border-gray-200 pl-15">
+      {/* user image */}
+      <img className="h-11 w-11 rounded-full mr-4" src={comment?.userImg} alt="user-image" />
         {/* right side */}
         <div className="flex-1">
         {/* Header */}
-
+        
         <div className="flex items-center justify-between">
             {/* post user info */}
-            <div className="flex items-center space-x-1 whitespace-nowrap">
+            <div className="flex flex-col sm:flex-row items-center space-x-1 whitespace-nowrap">
                 <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{comment?.name}</h4>
-                <span> - </span>
-                <span className="text-sm sm:text-[15px] hover:underline">
+                <span className="text-sm sm:text-[15px] hover:underline">-
                 <Moment fromNow>
                   {comment?.timestamp?.toDate()}
                 </Moment>
@@ -115,6 +120,7 @@ export default function Comment({comment, commentId, originalPostId}) {
 
         </div>
 
+    </div>
     </div>
   )
 }
