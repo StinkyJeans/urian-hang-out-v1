@@ -56,7 +56,7 @@ export default function Signin() {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Gsuite-logo.png/640px-Gsuite-logo.png"
                 alt="gsuite-logo-image"
               />
-              <p className="text-sm italic my-10">
+              <p className="text-md italic my-10 text-white">
                 This app is created for urians social media
                 inspired by twitter
               </p>
