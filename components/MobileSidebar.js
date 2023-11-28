@@ -60,7 +60,8 @@ export default function MobileSidebar() {
   }
   
   return (
-    <div className="block lg:hidden sticky top-0 ml-0 lg:ml-10 rounded-full mr-5 lg:mr-0">
+    <div className="block lg:hidden sticky top-0 ml-0 lg:ml-10 rounded-full mr-5 lg:mr-0 ">
+     <div className="sticky top-0">
       {/* Urian Logo */}
       <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
         <Image
@@ -72,7 +73,7 @@ export default function MobileSidebar() {
 
       {/* Menu */}
 
-      <div className="mt-4 mb-2.5 xl:items-start">
+      <div className="mt-4 mb-2.5 xl:items-start ">
         
         {currentUser && (
           <>
@@ -128,5 +129,6 @@ export default function MobileSidebar() {
         
       )}
     </div>
+    </div> 
   );
 }
