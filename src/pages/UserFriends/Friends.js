@@ -52,7 +52,7 @@ export default function Friends() {
 const FriendItem = ({ imageUrl, name, daysAgo }) => (
   <div className='flex items-center'>
     <img
-      className='h-11 w-11 rounded-full mr-4 ml-10'
+      className='h-11 w-11 rounded-full mr-4 ml-4'
       src={imageUrl}
       alt="Profile Image"
     />
