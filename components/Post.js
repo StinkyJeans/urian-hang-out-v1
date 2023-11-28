@@ -79,7 +79,7 @@ export default function Post({post,id}) {
         <div className="flex items-center justify-between">
             {/* post user info */}
             <div className="flex items-center space-x-1 whitespace-nowrap">
-                <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post?.data()?.name}</h4>
+                <h4 className="font-bold text-base sm:text-xs md:text-sm lg:text-[16px] xl:text-[15px] hover:underline">{post?.data()?.name}</h4>
                 <span className="space-4">-</span>
                 <span className="text-sm sm:text-[15px] hover:underline">
                 <Moment fromNow>

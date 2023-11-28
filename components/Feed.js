@@ -37,7 +37,7 @@ export default function Feed() {
             
         </div>
         <Input/>
-        <div className="p-2 md:p-4 lg:p-8">
+       
        <AnimatePresence>
         {posts.map((post) => (
           <motion.div key={post.id} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 1}}>
@@ -45,7 +45,7 @@ export default function Feed() {
           </motion.div>
         ))} 
         </AnimatePresence>
-        </div>
+        
     </div>
     
   )
