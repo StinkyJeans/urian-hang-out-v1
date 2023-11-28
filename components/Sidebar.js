@@ -28,7 +28,9 @@ export default function Sidebar() {
 
   };
   const handleHomeClick = () => {
-    if (router.pathname !== '/') {
+      if (router.pathname === '/') {
+      window.location.reload();
+    } else {
       router.push('/');
     }
   };

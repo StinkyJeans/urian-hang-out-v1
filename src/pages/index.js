@@ -15,11 +15,11 @@ export default function Home() {
       </Head>
 
       <main className='flex min-h-screen max-w-7xl mx-auto pt-1 '>
-    
-        {/* Sidebar */}
+   
+        {/*Sidebar*/}
 
         <Sidebar/>
-
+        
         {/* Feed */}
         <Feed />
 

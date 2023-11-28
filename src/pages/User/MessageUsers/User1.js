@@ -6,6 +6,8 @@ import {
   ArrowLeftIcon
 } from "@heroicons/react/outline";
 import { useRouter } from 'next/router';
+import { AnimatePresence, motion } from "framer-motion";
+
 
 export default function User1() {
   const router = useRouter();
@@ -64,6 +66,7 @@ export default function User1() {
           </div>
         </div>
         {/* Messages */}
+        
         <div className="xl:ml-[39%] border-l border-r border-gray-200 xl:min-w-[576px] sm:ml-[73px] flex-grow max-w-xl">
           <div className="justify-between flex py-2 px-3 sticky top-0 z-50 bg-white border-b border-gray-200 items-center">
             <div className='hoverEffect' onClick={() => router.push("/")}>
@@ -90,6 +93,7 @@ export default function User1() {
             <h2>CHARLES DAVE PAJARILLO</h2>
           </div>
           {/* Message Content */}
+          
           <div className=''>
             <div className='ml-10 mt-2'>
               <p className='inline-block bg-gray-400 text-white px-4 py-1 rounded-full font-bold shadow-md hover:brightness-95 disabled:opacity-50'>Aha naka Noc?</p>
@@ -112,7 +116,7 @@ export default function User1() {
               <p className='text-sm text-gray-500 ml-4'>- 4 minutes ago</p>
             </div>
           </div>
-
+          
           {/* Message Input */}
           <div className='border-b-4'>
             <div className="mt-2 flex items-center p-3 rounded-full bg-red-300 relative">
@@ -123,5 +127,6 @@ export default function User1() {
         </div>
       </main>
     </div>
+    
   );
 }
