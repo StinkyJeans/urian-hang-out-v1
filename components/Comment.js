@@ -8,7 +8,7 @@ import { useRecoilState } from "recoil";
 import { modalState, postIdState } from "../atom/modalAtom";
 import { useRouter } from "next/router";
 import { userState } from "../atom/userAtom";
-import CommentHeader from './CommentHeader';
+import { signIn } from "next-auth/react";
 
 
 export default function Comment({comment, commentId, originalPostId}) {
@@ -18,6 +18,7 @@ export default function Comment({comment, commentId, originalPostId}) {
   const [postId, setPostId] = useRecoilState(postIdState);
   const [currentUser] = useRecoilState(userState);
   const router = useRouter();
+  
   
 
   useEffect(() => {
@@ -56,36 +57,30 @@ export default function Comment({comment, commentId, originalPostId}) {
   }
 
   return (
-    
     <div>
-    {/* Comment Header */}
-    <CommentHeader />
-
-    {/* Single Comment */}
-    <div className="flex p-3 cursor-pointer border-b border-gray-200 pl-15">
-      {/* user image */}
-      <img className="h-11 w-11 rounded-full mr-4" src={comment?.userImg} alt="user-image" />
+      {/* Single Comment */}
+      <div className="flex p-3 cursor-pointer border-b border-gray-200 pl-15">
+        {/* user image */}
+        <img className="h-11 w-11 rounded-full mr-4" src={comment?.userImg} alt="user-image" />
         {/* right side */}
         <div className="flex-1">
-        {/* Header */}
-        
-        <div className="flex items-center justify-between">
+          {/* Header */}
+          <div className="flex items-center justify-between">
             {/* post user info */}
             <div className="flex flex-col sm:flex-row items-center space-x-1 whitespace-nowrap">
-                <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{comment?.name}</h4>
-                <span className="text-sm sm:text-[15px] hover:underline">-
-                <Moment fromNow>
-                  {comment?.timestamp?.toDate()}
-                </Moment>
-                </span>
+              <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{comment?.name}</h4>
+              <span className="text-sm sm:text-[15px] hover:underline">
+                -
+                <Moment fromNow>{comment?.timestamp?.toDate()}</Moment>
+              </span>
             </div>
+          </div>
 
-        </div>
-        {/* post text */}
-        <p  className="text-gray-800 text-[15px] sm:text-[16px] mb-2">{comment?.comment}</p>
+          {/* post text */}
+          <p className="text-gray-800 text-[15px] sm:text-[16px] mb-2">{comment?.comment}</p>
 
-        {/* icons */} 
-        <div className="flex justify-between text-gray-500 p-2">
+          {/* icons */}
+          <div className="flex justify-between text-gray-500 p-2">
             <div className="flex items-center">
             {hasLiked ? (
               <ThumbUpIcon onClick={likeComment} className="h-9 w-9 hoverEffect p-2 text-sky-500 hover:bg-sky-100"/>
