@@ -80,7 +80,7 @@ export default function Post({post,id}) {
             {/* post user info */}
             <div className="flex flex-col sm:flex-row items-center space-x-1 whitespace-nowrap" >
                 <h4 className="font-bold text-xs sm:text-xs md:text-sm lg:text-[16px] xl:text-[15px] hover:underline">{post?.data()?.name}</h4>
-                <span className="text-xs sm:text-[15px]">-
+                <span className="text-xs sm:text-[15px] text-gray-600">- 
                 <Moment fromNow>
                  {post?.data()?.timestamp?.toDate()}
                 </Moment>

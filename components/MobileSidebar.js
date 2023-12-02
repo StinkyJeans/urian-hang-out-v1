@@ -60,7 +60,7 @@ export default function MobileSidebar() {
   }
   
   return (
-    <div className="block lg:hidden sticky top-0 ml-0 lg:ml-10 rounded-full mr-5 lg:mr-0 ">
+    <div className="block lg:hidden sticky top-0 ml-0 lg:ml-10 rounded-full ">
      <div className="sticky top-0">
       {/* Urian Logo */}
       <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
@@ -73,26 +73,26 @@ export default function MobileSidebar() {
 
       {/* Menu */}
 
-      <div className="mt-4 mb-2.5 xl:items-start ">
+      <div className="mt-4 mb-2.5 xl:items-start  ">
         
         {currentUser && (
           <>
             
-            <button onClick={handleHomeClick} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
+            <button onClick={handleHomeClick} className="mb-2 flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
              <HomeIcon className="h-7 w-7 mr-3" />
             Home
             </button>
             
-            <button onClick={navigateToProfile} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
+            <button onClick={navigateToProfile} className="mb-2  flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
              <UserCircleIcon className="h-7 w-7 mr-3" />
             Profile
             </button>
-            <button onClick={navigateToUserFriends} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
+            <button onClick={navigateToUserFriends} className="mb-2  flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3">
              <UserIcon className="h-7 w-7 mr-3" />
             Friends
             </button>
             <MobileDropDownButton/>
-            <button onClick={onSignOut} className="hoverEffect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><ArrowLeftIcon className="h-5 w-5 mr-2" />Sign Out
+            <button onClick={onSignOut} className="mb-2  flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3"><ArrowLeftIcon className="h-5 w-5 mr-2" />Sign Out
             </button>
         </>
         )}

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { ChatIcon } from "@heroicons/react/outline";
 
 const DropdownButton = () => {
   const router = useRouter();
@@ -22,11 +23,11 @@ const DropdownButton = () => {
   };
 
   return (
-    <div className="block lg:hidden sticky top-0 ml-0 lg:ml-10 rounded-full mr-5 lg:mr-0 mb-2 hover:bg-gray-200">
+    <div className="block lg:hidden sticky top-0 ml-0 lg:ml-10  mr-5 lg:mr-0 mb-2">
       <button
-        className="text-gray-700 justify-center xl:justify-start text-lg space-x-3 "
+        className="text-gray-700 justify-center xl:justify-start text-lg space-x-3 flex "
         onClick={toggleDropdown}
-      >
+      ><ChatIcon className='h-7 w-7 mr-3'/>
         Messages
       </button>
       <div

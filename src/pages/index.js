@@ -20,7 +20,11 @@ export default function Home() {
         {/*Sidebar*/}
 
         <Sidebar/>
-        
+
+        {/* MobileSidebar */}
+
+        <MobileSidebar/>
+
         {/* Feed */}
         <Feed />
 
@@ -28,9 +32,7 @@ export default function Home() {
 
         <DropdownButton/>
        
-        {/* MobileSidebar */}
-
-        <MobileSidebar/>
+        
 
        
         {/* Modal */}
